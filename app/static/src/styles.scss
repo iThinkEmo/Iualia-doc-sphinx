@@ -1,0 +1,20 @@
+/* Global styles */
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto Slab';
+}
+
+a :hover {
+  border: none !important;
+}
+
+a:focus {
+  outline:0;
+}
+
+button:focus {
+  outline:0;
+}

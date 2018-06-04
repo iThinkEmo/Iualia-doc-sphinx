@@ -1,0 +1,35 @@
+.main-card {
+  width: 100%;
+  border-radius: 10px;
+  padding-top: 10px;
+}
+
+.main-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.form-content {
+  padding-top: 15px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+  overflow-x: hidden;
+}
+
+.input-own {
+  margin-top      : 10px;
+}
+
+.mat-tab-list {
+  .mat-tab-label {
+    @media only screen and (min-width: 900px) {
+      flex-basis: 0;
+      flex-grow: 1;
+    }
+  }
+}
+
+.form-row {
+  margin-top:10px;
+}

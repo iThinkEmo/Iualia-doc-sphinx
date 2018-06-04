@@ -1,0 +1,108 @@
+<div style="min-height: calc(100vh - 140px);">
+  <div class="row justify-content-center" style="margin-top: 50px; margin-bottom: 50px;">
+    <div class="col-10 col-sm-5 col-md-3 text-center">
+      <img class="img-fluid" width="210px;" style="border: none;" src="http://www.venders.mx/img/venders-logo-white.png"/>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-10 col-sm-8 col-md-5 col-lg-4">
+      <mat-card class="main-card z-depth-1">
+        <mat-card-header>
+
+        </mat-card-header>
+
+        <mat-card-content>
+          <mat-tab-group mat-stretch-tabs class="logIn">
+            <mat-tab label="Ingresar">
+              <div class="form-content">
+                <form [formGroup]="logInForm">
+                  <div class="row justify-content-center">
+                    <div class="col-11">
+                      <mat-form-field>
+                        <input matInput placeholder="Correo electrónico" formControlName="email">
+                        <mat-error *ngIf="logInForm.controls.email.hasError('required')">Tu correo es necesario para ingresar</mat-error>
+                        <mat-error *ngIf="logInForm.controls.email.hasError('email') && !logInForm.controls.email.hasError('required')">El correo es incorrecto</mat-error>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center form-row">
+                    <div class="col-11">
+                      <mat-form-field>
+                        <input matInput placeholder="Contraseña" formControlName="password">
+                        <mat-error *ngIf="logInForm.controls.password.hasError('required')">La contraseña es necesaria para ingresar</mat-error>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center" style="margin-top: 15px;">
+                    <div class="col-11">
+                      <button mat-raised-button color="primary" class="btn-block" type="submit">Entrar</button>
+                    </div>
+                  </div>
+                </form>
+                <div class="row justify-content-center">
+                  <div class="col-11">
+                    <div class="text-right" style="margin-top:10px;">
+                      <a align="right" style="cursor: pointer; color: #49C3B1; font-size: 12px; font-weight: 300"><label>Olvide la contraseña</label></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </mat-tab>
+            <mat-tab label="Registrar">
+              <div class="form-content">
+                <form [formGroup]="registerForm">
+                  <div class="row justify-content-center">
+                    <div class="col-11">
+                      <mat-form-field>
+                        <input matInput placeholder="Nombre Completo" formControlName="name">
+                        <mat-error *ngIf="registerForm.controls.name.hasError('required')">Tu nombre es necesario para el registro</mat-error>
+                        <mat-error *ngIf="registerForm.controls.name.errors?.pattern">No se permite ingresar números o caracteres especiales</mat-error>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center form-row">
+                    <div class="col-11">
+                      <mat-form-field>
+                        <input matInput placeholder="Correo electrónico" formControlName="email">
+                        <mat-error *ngIf="registerForm.controls.email.hasError('required')">Tu correo es necesario para el registro</mat-error>
+                        <mat-error *ngIf="registerForm.controls.email.hasError('email') && !registerForm.controls.email.hasError('required')">El correo es incorrecto</mat-error>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center form-row">
+                    <div class="col-11">
+                      <mat-form-field>
+                        <input type="password" matInput placeholder="Contraseña" formControlName="password">
+                        <mat-error *ngIf="registerForm.controls.password.hasError('required')">La contraseña es necesaria para el registro</mat-error>
+                        <mat-error *ngIf="registerForm.controls.password.hasError('minlength')">Tu contraseña debe tener minimo 8 caracteres, al menos una letra y un numero</mat-error>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center form-row">
+                    <div class="col-11">
+                      <mat-form-field>
+                        <input type="password" matInput placeholder="Repetir contraseña" formControlName="confirmPassword">
+                        <mat-error *ngIf="registerForm.controls.confirmPassword.hasError('required')">Validar la contraseña es necesario para el registro</mat-error>
+                        <mat-error *ngIf="registerForm.controls.confirmPassword.hasError('MatchPassword')">Las contraseñas no coinciden</mat-error>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center" style="margin-top: 15px;">
+                    <div class="col-11">
+                      <button mat-raised-button color="primary" class="btn-block" type="submit">Registrarse</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </mat-tab>
+          </mat-tab-group>
+        </mat-card-content>
+
+        <mat-card-actions>
+
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

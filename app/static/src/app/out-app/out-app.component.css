@@ -1,0 +1,22 @@
+.main-footer {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.main-footer > .structure {
+    text-align: center;
+}
+.main-footer > .structure ul {
+    vertical-align: middle;
+}
+.main-footer > .structure li {
+    display: inline-block;
+}
+
+.outApp-container {
+  background: linear-gradient(to bottom, #3DC983 0%, #49C3B1 100%);
+  height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+/* #3DC983 #49C3B1*/

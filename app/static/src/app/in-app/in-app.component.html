@@ -1,0 +1,53 @@
+<div class="main-container" [class.main-is-mobile]="mobileQuery.matches">
+  <mat-sidenav-container class="main-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0" autosize>
+    <mat-sidenav  class="main-sidenav z-depth-1-half" #snav opened="true" [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+       <mat-nav-list class="text-center">
+         <a routerLink="">
+           <img *ngIf="!showFiller && !mobileQuery.matches" class="img-fluid" width="210px;" style="padding:30px; border: none;" src="http://www.venders.mx/img/venders-logo-white.png"/>
+           <img *ngIf="showFiller || mobileQuery.matches" class="img-fluid" width="25px;" style="border: none; margin-top:15px; padding-bottom:17px;" src="https://seller.etomin.com/assets/images/etomin_icon.png"/>
+         </a>
+       </mat-nav-list>
+
+       <mat-nav-list class="nav-menu">
+         <a mat-list-item routerLink=""><mat-icon style="margin-left: 7px;">insert_chart</mat-icon><span *ngIf="!showFiller && !mobileQuery.matches" class="inline-block menu-item">Resumen</span></a>
+         <a mat-list-item routerLink=""><mat-icon style="margin-left: 7px;">sms</mat-icon><span *ngIf="!showFiller && !mobileQuery.matches" class="inline-block menu-item">Enviar SMS</span></a>
+         <a mat-list-item routerLink=""><mat-icon style="margin-left: 7px;">attachment</mat-icon><span *ngIf="!showFiller && !mobileQuery.matches" class="inline-block menu-item">Enviar archivo SMS</span></a>
+         <a mat-list-item routerLink=""><mat-icon style="margin-left: 7px;">persons</mat-icon><span *ngIf="!showFiller && !mobileQuery.matches" class="inline-block menu-item">Destinatarios</span></a>
+         <a mat-list-item routerLink=""><mat-icon style="margin-left: 7px;">check</mat-icon><span *ngIf="!showFiller && !mobileQuery.matches" class="inline-block menu-item">Estado de Cuenta</span></a>
+         <a mat-list-item routerLink=""><mat-icon style="margin-left: 7px;">sync</mat-icon><span *ngIf="!showFiller && !mobileQuery.matches" class="inline-block menu-item">Saldo y pagos</span></a>
+       </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content style="background-color: #F0F0F0;">
+
+      <!-- <mdb-navbar SideClass="navbar navbar-expand-lg navbar-light white">
+        <links>
+            <div class="form-inline waves-light" mdbWavesEffect>
+              <span (click)="mobileQuery.matches ? snav.toggle() || showFiller = false : showFiller = !showFiller; !mobileQuery.matches ? snav.open() : null;" class="menu-toggler"><mat-icon style="color: gray;">menu</mat-icon></span>
+              <span class="main-spacer"></span>
+              <mat-icon class="main-icon top-menu-icon">person_pin</mat-icon>
+              <mat-icon class="main-icon top-menu-icon">notifications</mat-icon>
+              <mat-icon class="main-icon top-menu-icon">settings</mat-icon>
+              <mat-icon class="main-icon top-menu-icon" style="margin-right:20px;">power_settings_new</mat-icon>
+            </div>
+        </links>
+      </mdb-navbar> -->
+
+      <mat-toolbar class="main-header">
+        <span (click)="mobileQuery.matches ? snav.toggle() || showFiller = false : showFiller = !showFiller; !mobileQuery.matches ? snav.open() : null;" class="menu-toggler"><mat-icon style="color: gray;">menu</mat-icon></span>
+        <span class="main-spacer"></span>
+        <mat-icon class="main-icon top-menu-icon">person_pin</mat-icon>
+        <mat-icon class="main-icon top-menu-icon">notifications</mat-icon>
+        <mat-icon class="main-icon top-menu-icon">settings</mat-icon>
+        <mat-icon class="main-icon top-menu-icon" style="margin-right:20px;">power_settings_new</mat-icon>
+      </mat-toolbar>
+
+      <div class="container-fluid">
+        <br />
+        <router-outlet></router-outlet>
+      </div>
+
+      <mat-toolbar class="main-footer"><a class="pull-right" routerLink=""><img class="img-fluid" width="80px;" src="http://www.venders.mx/img/venders-logo-white.png"/></a></mat-toolbar>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
