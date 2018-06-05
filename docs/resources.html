@@ -1,0 +1,612 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Code Documentation &#8212; Iualia 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to Iualia’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="code-documentation">
+<h1>Code Documentation<a class="headerlink" href="#code-documentation" title="Permalink to this headline">¶</a></h1>
+<p>La documentación del código se escribe en este texto</p>
+<div class="section" id="recursos">
+<h2>Recursos<a class="headerlink" href="#recursos" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-app.resources.user">
+<span id="usuario"></span><h3>Usuario<a class="headerlink" href="#module-app.resources.user" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="app.resources.user.ChangeUserBalance">
+<em class="property">class </em><code class="descclassname">app.resources.user.</code><code class="descname">ChangeUserBalance</code><a class="headerlink" href="#app.resources.user.ChangeUserBalance" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="app.resources.user.ChangeUserBalance.put">
+<code class="descname">put</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.resources.user.ChangeUserBalance.put" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the balance to the user given a new balance</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Confirmation message</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="app.resources.user.ForgotPassword">
+<em class="property">class </em><code class="descclassname">app.resources.user.</code><code class="descname">ForgotPassword</code><a class="headerlink" href="#app.resources.user.ForgotPassword" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="app.resources.user.ForgotPassword.put">
+<code class="descname">put</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.resources.user.ForgotPassword.put" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recovers the password of the user by creating a new password</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Confirmation message</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="app.resources.user.User">
+<em class="property">class </em><code class="descclassname">app.resources.user.</code><code class="descname">User</code><a class="headerlink" href="#app.resources.user.User" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="app.resources.user.User.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>param</em><span class="sig-paren">)</span><a class="headerlink" href="#app.resources.user.User.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the information of a specific user, given its email or its ID</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">User object</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.resources.user.User.post">
+<code class="descname">post</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.resources.user.User.post" title="Permalink to this definition">¶</a></dt>
+<dd><p>Registers a new user manually given its body parameters</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">JSON object with the tokens</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="app.resources.user.UserLogin">
+<em class="property">class </em><code class="descclassname">app.resources.user.</code><code class="descname">UserLogin</code><a class="headerlink" href="#app.resources.user.UserLogin" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="classmethod">
+<dt id="app.resources.user.UserLogin.post">
+<em class="property">classmethod </em><code class="descname">post</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.resources.user.UserLogin.post" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logs in a user with a new access token and a new refresh token</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">JSON object with the tokens</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="app.resources.user.UserLogout">
+<em class="property">class </em><code class="descclassname">app.resources.user.</code><code class="descname">UserLogout</code><a class="headerlink" href="#app.resources.user.UserLogout" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="app.resources.user.UserLogout.post">
+<code class="descname">post</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.resources.user.UserLogout.post" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logs out the user from the current session</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Confirm message</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="app.resources.user.UserStatus">
+<em class="property">class </em><code class="descclassname">app.resources.user.</code><code class="descname">UserStatus</code><a class="headerlink" href="#app.resources.user.UserStatus" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="app.resources.user.UserStatus.put">
+<code class="descname">put</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.resources.user.UserStatus.put" title="Permalink to this definition">¶</a></dt>
+<dd><p>Changes the status of the user’s account (Active / Not Active)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Confirmation message</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="app.resources.user.UserType">
+<em class="property">class </em><code class="descclassname">app.resources.user.</code><code class="descname">UserType</code><a class="headerlink" href="#app.resources.user.UserType" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="app.resources.user.UserType.put">
+<code class="descname">put</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.resources.user.UserType.put" title="Permalink to this definition">¶</a></dt>
+<dd><p>Changes the type of the user from Prepago to Pospago and viceversa</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Confirmation message</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-app.resources.campaign">
+<span id="campanas"></span><h3>Campañas<a class="headerlink" href="#module-app.resources.campaign" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="app.resources.campaign.Campaign">
+<em class="property">class </em><code class="descclassname">app.resources.campaign.</code><code class="descname">Campaign</code><a class="headerlink" href="#app.resources.campaign.Campaign" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="app.resources.campaign.Campaign.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>campaign_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.resources.campaign.Campaign.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the campaign with the given id in the parameters.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>campaign_id</strong> – The id of the campaign to be deleted from the user</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">JSON object with the remaining campaigns</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.resources.campaign.Campaign.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>campaign_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.resources.campaign.Campaign.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the information of the campaign with the given id in the parameters.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>campaign_id</strong> – The id of the campaign to be read from the user</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">JSON object with the requested campaign information</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.resources.campaign.Campaign.put">
+<code class="descname">put</code><span class="sig-paren">(</span><em>campaign_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.resources.campaign.Campaign.put" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updated the campaign with the given id in the parameters and the JSON body.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>campaign_id</strong> – The id of the campaign to be updated from the user</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">JSON object with all the campaigns, with updated data</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="app.resources.campaign.Campaigns">
+<em class="property">class </em><code class="descclassname">app.resources.campaign.</code><code class="descname">Campaigns</code><a class="headerlink" href="#app.resources.campaign.Campaigns" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="app.resources.campaign.Campaigns.get">
+<code class="descname">get</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.resources.campaign.Campaigns.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the information of all the campaigns of the current user.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">JSON object with all the campaigns</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.resources.campaign.Campaigns.post">
+<code class="descname">post</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.resources.campaign.Campaigns.post" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inserts a new campaign to the current user.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">JSON object with the newly created campaign</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-app.resources.card">
+<span id="tarjetas"></span><h3>Tarjetas<a class="headerlink" href="#module-app.resources.card" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="app.resources.card.Card">
+<em class="property">class </em><code class="descclassname">app.resources.card.</code><code class="descname">Card</code><a class="headerlink" href="#app.resources.card.Card" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="app.resources.card.Card.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>card_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.resources.card.Card.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the card with the given id in the parameters.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>card_id</strong> – The id of the card to be deleted from the user</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">JSON object with the remaining cards</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.resources.card.Card.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>card_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.resources.card.Card.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the information of the card with the given id in the parameters.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>card_id</strong> – The id of the card to be read from the user</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">JSON object with the requested card information</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.resources.card.Card.put">
+<code class="descname">put</code><span class="sig-paren">(</span><em>card_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.resources.card.Card.put" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updated the card with the given id in the parameters and the JSON body.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>card_id</strong> – The id of the card to be updated from the user</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">JSON object with all the cards, with updated data</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="app.resources.card.Cards">
+<em class="property">class </em><code class="descclassname">app.resources.card.</code><code class="descname">Cards</code><a class="headerlink" href="#app.resources.card.Cards" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="app.resources.card.Cards.get">
+<code class="descname">get</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.resources.card.Cards.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the information of all the Cards of the current user.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">JSON object with all the Cards</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.resources.card.Cards.post">
+<code class="descname">post</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.resources.card.Cards.post" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inserts a new Card to the current user.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">JSON object with the newly created Card</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-app.resources.message">
+<span id="mensajes"></span><h3>Mensajes<a class="headerlink" href="#module-app.resources.message" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="app.resources.message.Messages">
+<em class="property">class </em><code class="descclassname">app.resources.message.</code><code class="descname">Messages</code><a class="headerlink" href="#app.resources.message.Messages" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="app.resources.message.Messages.get">
+<code class="descname">get</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.resources.message.Messages.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the information of all the messages of a certain package.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">JSON object with all the messages</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-app.resources.script">
+<span id="script"></span><h3>Script<a class="headerlink" href="#module-app.resources.script" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="app.resources.script.Script">
+<em class="property">class </em><code class="descclassname">app.resources.script.</code><code class="descname">Script</code><a class="headerlink" href="#app.resources.script.Script" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="app.resources.script.Script.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>script_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.resources.script.Script.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the script with the given id in the parameters.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>script_id</strong> – The id of the script to be deleted from the user</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">JSON object with the remaining scripts</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.resources.script.Script.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>script_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.resources.script.Script.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the information of the script with the given id in the parameters.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>script_id</strong> – The id of the script to be read from the user</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">JSON object with the requested script information</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.resources.script.Script.put">
+<code class="descname">put</code><span class="sig-paren">(</span><em>script_id</em><span class="sig-paren">)</span><a class="headerlink" href="#app.resources.script.Script.put" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updated the script with the given id in the parameters and the JSON body.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>script_id</strong> – The id of the script to be updated from the user</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">JSON object with all the scripts, with updated data</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="app.resources.script.Scripts">
+<em class="property">class </em><code class="descclassname">app.resources.script.</code><code class="descname">Scripts</code><a class="headerlink" href="#app.resources.script.Scripts" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="app.resources.script.Scripts.get">
+<code class="descname">get</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.resources.script.Scripts.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the information of all the scripts of the current user.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">JSON object with all the scripts</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.resources.script.Scripts.post">
+<code class="descname">post</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.resources.script.Scripts.post" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inserts a new script to the current user.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">JSON object with the newly created script</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-app.resources.package">
+<span id="paquetes"></span><h3>Paquetes<a class="headerlink" href="#module-app.resources.package" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="app.resources.package.Package">
+<em class="property">class </em><code class="descclassname">app.resources.package.</code><code class="descname">Package</code><a class="headerlink" href="#app.resources.package.Package" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="app.resources.package.PackageDetail">
+<em class="property">class </em><code class="descclassname">app.resources.package.</code><code class="descname">PackageDetail</code><a class="headerlink" href="#app.resources.package.PackageDetail" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="app.resources.package.Packages">
+<em class="property">class </em><code class="descclassname">app.resources.package.</code><code class="descname">Packages</code><a class="headerlink" href="#app.resources.package.Packages" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-app.resources.payment">
+<span id="pagos"></span><h3>Pagos<a class="headerlink" href="#module-app.resources.payment" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="app.resources.payment.Payments">
+<em class="property">class </em><code class="descclassname">app.resources.payment.</code><code class="descname">Payments</code><a class="headerlink" href="#app.resources.payment.Payments" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="app.resources.payment.Payments.get">
+<code class="descname">get</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.resources.payment.Payments.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the information of all the payments of the current user.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">JSON object with all the payments</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="app.resources.payment.Payments.post">
+<code class="descname">post</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.resources.payment.Payments.post" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inserts a new payment to the current user.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">JSON object with the newly created payment</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-app.resources.refresh">
+<span id="refresh"></span><h3>Refresh<a class="headerlink" href="#module-app.resources.refresh" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="app.resources.refresh.RefreshToken">
+<em class="property">class </em><code class="descclassname">app.resources.refresh.</code><code class="descname">RefreshToken</code><a class="headerlink" href="#app.resources.refresh.RefreshToken" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Code Documentation</a><ul>
+<li><a class="reference internal" href="#recursos">Recursos</a><ul>
+<li><a class="reference internal" href="#module-app.resources.user">Usuario</a></li>
+<li><a class="reference internal" href="#module-app.resources.campaign">Campañas</a></li>
+<li><a class="reference internal" href="#module-app.resources.card">Tarjetas</a></li>
+<li><a class="reference internal" href="#module-app.resources.message">Mensajes</a></li>
+<li><a class="reference internal" href="#module-app.resources.script">Script</a></li>
+<li><a class="reference internal" href="#module-app.resources.package">Paquetes</a></li>
+<li><a class="reference internal" href="#module-app.resources.payment">Pagos</a></li>
+<li><a class="reference internal" href="#module-app.resources.refresh">Refresh</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to Iualia’s documentation!</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/resources.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, SIT Solutions.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/resources.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
