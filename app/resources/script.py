@@ -14,6 +14,7 @@ class Scripts(Resource):
     def get(self):
         """
         Retrieves the information of all the scripts of the current user.
+
         :return: JSON object with all the scripts
         """
         user_id = get_jwt_identity()
@@ -24,6 +25,7 @@ class Scripts(Resource):
     def post(self):
         """
         Inserts a new script to the current user.
+
         :return: JSON object with the newly created script
         """
         try:
@@ -40,7 +42,9 @@ class Script(Resource):
     def get(self, script_id):
         """
         Retrieves the information of the script with the given id in the parameters.
+
         :param script_id: The id of the script to be read from the user
+
         :return: JSON object with the requested script information
         """
         try:
@@ -56,7 +60,9 @@ class Script(Resource):
     def delete(self, script_id):
         """
         Deletes the script with the given id in the parameters.
+
         :param script_id: The id of the script to be deleted from the user
+
         :return: JSON object with the remaining scripts
         """
         try:
@@ -70,7 +76,9 @@ class Script(Resource):
     def put(self, script_id):
         """
         Updated the script with the given id in the parameters and the JSON body.
+
         :param script_id: The id of the script to be updated from the user
+
         :return: JSON object with all the scripts, with updated data
         """
         try:

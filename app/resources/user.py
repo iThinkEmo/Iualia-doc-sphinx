@@ -30,6 +30,7 @@ class UserLogin(Resource):
     def post(cls):
         """
         Logs in a user with a new access token and a new refresh token
+
         :return: JSON object with the tokens
         """
         data = cls.parser.parse_args()
@@ -49,6 +50,7 @@ class UserLogout(Resource):
     def post(self):
         """
         Logs out the user from the current session
+
         :return: Confirm message
         """
         jti = get_raw_jwt()['jti']
@@ -61,6 +63,7 @@ class User(Resource):
     def post(self):
         """
         Registers a new user manually given its body parameters
+
         :return: JSON object with the tokens
         """
         parser = reqparse.RequestParser()
@@ -100,6 +103,7 @@ class User(Resource):
     def get(self, param):
         """
         Gets the information of a specific user, given its email or its ID
+
         :return: User object
         """
         if Utils.email_is_valid(param):
@@ -116,11 +120,12 @@ class User(Resource):
                 return Response(message=e.message).json(), 400
 
 
-class ChangeUserType(Resource):
+class UserType(Resource):
     @fresh_jwt_required
     def put(self):
         """
         Changes the type of the user from Prepago to Pospago and viceversa
+
         :return: Confirmation message
         """
         try:
@@ -133,11 +138,12 @@ class ChangeUserType(Resource):
             return Response(message=e.message).json(), 400
 
 
-class ChangeUserStatus(Resource):
+class UserStatus(Resource):
     @fresh_jwt_required
     def put(self):
         """
         Changes the status of the user's account (Active / Not Active)
+
         :return: Confirmation message
         """
         try:
@@ -162,6 +168,7 @@ class ChangeUserBalance(Resource):
     def put(self):
         """
         Updates the balance to the user given a new balance
+
         :return: Confirmation message
         """
         try:
@@ -181,6 +188,7 @@ class ForgotPassword(Resource):
     def put(self):
         """
         Recovers the password of the user by creating a new password
+
         :return: Confirmation message
         """
         try:

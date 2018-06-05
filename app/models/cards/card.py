@@ -21,8 +21,10 @@ class Card(BaseModel):
     def add(cls, user: User, new_card):
         """
         Adds a new card to the given user, and uses Etomin API to tokenise it.
+
         :param user: User object
         :param new_card: The new card to be added to the user
+
         :return: A brand new card
         """
 
@@ -54,8 +56,10 @@ class Card(BaseModel):
     def is_card_repeated(user: User, etomin_token):
         """
         Looks for a repeated card in the user array of cards.
+
         :param user: User object
         :param etomin_token: The tokenised card provided by etomin which must not be present in any other user card
+
         :return: Status of repeated card (True/False)
         """
         for card in user.cards:
@@ -67,7 +71,9 @@ class Card(BaseModel):
     def get_user_cards(user: User):
         """
         Retrieves the information of all the cards associated to one user.
+
         :param user: User object
+
         :return: All the cards of the current user
         """
         return user.cards
@@ -89,9 +95,11 @@ class Card(BaseModel):
     def update(user: User, _id, data):
         """
         Updates the information (number, name, type, and/or token) from the card with the given id.
+
         :param user: User object
         :param _id: The ID of the card to be updated
         :param data: Dictionary containing the information of the number, name, type, and token to be updated
+
         :return: All the cards of the current user, with updated data
         """
         for card in user.cards:
@@ -110,8 +118,10 @@ class Card(BaseModel):
     def delete(user: User, _id):
         """
         Removes from the user's array of cards the card with the given id.
+
         :param user: User object
         :param _id: The ID of the card to be deleted
+
         :return: The remaining cards of the user
         """
         for card in user.cards:

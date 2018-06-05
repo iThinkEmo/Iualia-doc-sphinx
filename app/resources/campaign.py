@@ -14,6 +14,7 @@ class Campaigns(Resource):
     def get(self):
         """
         Retrieves the information of all the campaigns of the current user.
+
         :return: JSON object with all the campaigns
         """
         user_id = get_jwt_identity()
@@ -24,6 +25,7 @@ class Campaigns(Resource):
     def post(self):
         """
         Inserts a new campaign to the current user.
+
         :return: JSON object with the newly created campaign
         """
         try:
@@ -40,7 +42,9 @@ class Campaign(Resource):
     def get(self, campaign_id):
         """
         Retrieves the information of the campaign with the given id in the parameters.
+
         :param campaign_id: The id of the campaign to be read from the user
+
         :return: JSON object with the requested campaign information
         """
         try:
@@ -56,7 +60,9 @@ class Campaign(Resource):
     def delete(self, campaign_id):
         """
         Deletes the campaign with the given id in the parameters.
+
         :param campaign_id: The id of the campaign to be deleted from the user
+
         :return: JSON object with the remaining campaigns
         """
         try:
@@ -70,7 +76,9 @@ class Campaign(Resource):
     def put(self, campaign_id):
         """
         Updated the campaign with the given id in the parameters and the JSON body.
+
         :param campaign_id: The id of the campaign to be updated from the user
+
         :return: JSON object with all the campaigns, with updated data
         """
         try:

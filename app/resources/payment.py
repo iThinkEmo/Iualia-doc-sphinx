@@ -14,6 +14,7 @@ class Payments(Resource):
     def post(self):
         """
         Inserts a new payment to the current user.
+
         :return: JSON object with the newly created payment
         """
         try:
@@ -30,6 +31,7 @@ class Payments(Resource):
     def get(self):
         """
         Retrieves the information of all the payments of the current user.
+
         :return: JSON object with all the payments
         """
         user_id = get_jwt_identity()

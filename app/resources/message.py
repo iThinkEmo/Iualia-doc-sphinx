@@ -39,6 +39,7 @@ class Messages(Resource):
     def get(self):
         """
         Retrieves the information of all the messages of a certain package.
+
         :return: JSON object with all the messages
         """
         user_id = get_jwt_identity()

@@ -12,16 +12,17 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+import os
+import sys
+#sys.path.append(os.path.join(os.path.dirname(__name__), '../app/models/campaigns'))
+sys.path.insert(0, os.path.abspath('..'))
 
 
 # -- Project information -----------------------------------------------------
 
 project = 'Iualia'
-copyright = '2018, Aldo'
-author = 'Aldo'
+copyright = '2018, SIT Solutions'
+author = 'SIT Solutions'
 
 # The short X.Y version
 version = ''
@@ -41,6 +42,8 @@ release = '0.0.1'
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.githubpages',
+    'sphinxcontrib.httpdomain',
+    'sphinxcontrib.autohttp.flask',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -131,7 +134,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'Iualia.tex', 'Iualia Documentation',
-     'Aldo', 'manual'),
+     'SIT Solutions', 'manual'),
 ]
 
 

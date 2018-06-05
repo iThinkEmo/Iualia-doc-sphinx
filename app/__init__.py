@@ -7,8 +7,8 @@ from app.common.database import Database
 from app.common.response import Response
 from app.resources.user import (UserLogin,
                                 User,
-                                ChangeUserType,
-                                ChangeUserStatus,
+                                UserType,
+                                UserStatus,
                                 ChangeUserBalance,
                                 UserLogout,
                                 ForgotPassword)
@@ -58,8 +58,8 @@ def create_app(config_name):
 
     api.add_resource(UserLogin, '/login')
     api.add_resource(User, '/user', '/user/<string:param>')
-    api.add_resource(ChangeUserType, '/user/change_user_type')
-    api.add_resource(ChangeUserStatus, '/user/change_status')
+    api.add_resource(UserType, '/user/change_user_type')
+    api.add_resource(UserStatus, '/user/change_status')
     api.add_resource(ChangeUserBalance, '/user/change_balance')
     api.add_resource(Campaigns, '/user/campaigns')
     api.add_resource(Campaign, '/user/campaign/<string:campaign_id>')

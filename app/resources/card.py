@@ -14,6 +14,7 @@ class Cards(Resource):
     def get(self):
         """
         Retrieves the information of all the Cards of the current user.
+
         :return: JSON object with all the Cards
         """
         user_id = get_jwt_identity()
@@ -24,6 +25,7 @@ class Cards(Resource):
     def post(self):
         """
         Inserts a new Card to the current user.
+
         :return: JSON object with the newly created Card
         """
         try:
@@ -44,7 +46,9 @@ class Card(Resource):
     def get(self, card_id):
         """
         Retrieves the information of the card with the given id in the parameters.
+
         :param card_id: The id of the card to be read from the user
+
         :return: JSON object with the requested card information
         """
         try:
@@ -60,7 +64,9 @@ class Card(Resource):
     def put(self, card_id):
         """
         Updated the card with the given id in the parameters and the JSON body.
+
         :param card_id: The id of the card to be updated from the user
+
         :return: JSON object with all the cards, with updated data
         """
         try:
@@ -75,7 +81,9 @@ class Card(Resource):
     def delete(self, card_id):
         """
         Deletes the card with the given id in the parameters.
+
         :param card_id: The id of the card to be deleted from the user
+
         :return: JSON object with the remaining cards
         """
         try:
